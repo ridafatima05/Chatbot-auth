@@ -1,0 +1,26 @@
+chainlit: 2.0.0
+
+# Interface Settings
+ui:
+  name: "Simple Chat-bot"
+  description: "A simple chatbot powered by Google's Gemini Model"
+
+# Message Settings
+default_expand_messages: true
+
+# Authentication Settings
+auth:
+  required: true
+  providers:
+    - github
+    - google
+
+# OAuth Provider Configuration
+oauth_providers:
+  github:
+    client_id: ${OAUTH_GITHUB_CLIENT_ID}
+    client_secret: ${OAUTH_GITHUB_CLIENT_SECRET}
+
+  google:
+    client_id: ${OAUTH_GOOGLE_CLIENT_ID}
+    client_secret: ${OAUTH_GOOGLE_CLIENT_SECRET}
